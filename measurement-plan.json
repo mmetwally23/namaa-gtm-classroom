@@ -1,0 +1,227 @@
+{
+  "schema_version": "1.0",
+  "environment": "classroom_simulation",
+  "status": {
+    "data_layer": "implemented",
+    "gtm": "configured_not_verified",
+    "ga4": "receipt_not_verified"
+  },
+  "currency": "EGP",
+  "storage": {
+    "scope": "browser_profile",
+    "key": "namaa.store.v3",
+    "orders": "local_only",
+    "events": "last_300"
+  },
+  "events": [
+    {
+      "event": "video_start",
+      "when": "HTML5 clip begins; custom event mapping required"
+    },
+    {
+      "event": "video_progress",
+      "when": "25/50/75 percent playback position reached"
+    },
+    {
+      "event": "video_complete",
+      "when": "HTML5 clip ended"
+    },
+    {
+      "event": "video_pause",
+      "when": "Paused before completion"
+    },
+    {
+      "event": "fit_panel_view",
+      "when": "Advice panel visible after opening"
+    },
+    {
+      "event": "outbound_click",
+      "when": "External example link selected"
+    },
+    {
+      "event": "campaign_landing",
+      "when": "Allowlisted classroom campaign landing"
+    },
+    {
+      "event": "payload_audit",
+      "when": "Local validator summary only; no pasted content"
+    },
+    {
+      "event": "view_promotion",
+      "when": "Campaign becomes visible"
+    },
+    {
+      "event": "select_promotion",
+      "when": "Campaign selected"
+    },
+    {
+      "event": "form_start",
+      "when": "Newsletter interaction starts"
+    },
+    {
+      "event": "form_validation_error",
+      "when": "Newsletter invalid field, no value"
+    },
+    {
+      "event": "generate_lead",
+      "when": "Successful local demo signup once per browser"
+    },
+    {
+      "event": "file_download",
+      "when": "Size-guide CSV download selected"
+    },
+    {
+      "event": "virtual_page_view",
+      "when": "Actual SPA history navigation"
+    },
+    {
+      "event": "embedded_form_submit",
+      "when": "Origin-checked iframe bridge"
+    },
+    {
+      "event": "lab_scroll",
+      "when": "Lab depth threshold"
+    },
+    {
+      "event": "lab_engaged",
+      "when": "10 seconds foreground engagement after arming"
+    },
+    {
+      "event": "lab_payload",
+      "when": "Intentional diagnostic fixture"
+    },
+    {
+      "event": "lab_duplicate_probe",
+      "when": "Intentional repeated event ID, no revenue"
+    },
+    {
+      "event": "consent_choice",
+      "when": "Optional measurement choice saved"
+    },
+    {
+      "event": "view_item_list",
+      "when": "Rendered product list"
+    },
+    {
+      "event": "select_item",
+      "when": "Product selected from list"
+    },
+    {
+      "event": "view_search_results",
+      "when": "Submitted search; potential PII redacted"
+    },
+    {
+      "event": "product_filter",
+      "when": "Applied age/size/colour/price/sort"
+    },
+    {
+      "event": "view_item",
+      "when": "Product detail viewed"
+    },
+    {
+      "event": "select_variant",
+      "when": "Size/colour change with availability"
+    },
+    {
+      "event": "add_to_wishlist",
+      "when": "Style saved"
+    },
+    {
+      "event": "remove_from_wishlist",
+      "when": "Style removed (custom)"
+    },
+    {
+      "event": "add_to_cart",
+      "when": "Quantity added/increased"
+    },
+    {
+      "event": "remove_from_cart",
+      "when": "Quantity removed/decreased"
+    },
+    {
+      "event": "view_cart",
+      "when": "Drawer or full cart viewed"
+    },
+    {
+      "event": "coupon_applied",
+      "when": "Valid coupon accepted (custom)"
+    },
+    {
+      "event": "coupon_rejected",
+      "when": "Invalid coupon, no raw value (custom)"
+    },
+    {
+      "event": "begin_checkout",
+      "when": "New checkout identity"
+    },
+    {
+      "event": "checkout_step_completed",
+      "when": "Customer step complete, no PII (custom)"
+    },
+    {
+      "event": "checkout_validation_error",
+      "when": "Field identifiers only (custom)"
+    },
+    {
+      "event": "add_shipping_info",
+      "when": "Delivery confirmed"
+    },
+    {
+      "event": "add_payment_info",
+      "when": "Payment method selected"
+    },
+    {
+      "event": "payment_failed",
+      "when": "Simulated decline, never purchase (custom)"
+    },
+    {
+      "event": "payment_retry",
+      "when": "Retry armed (custom)"
+    },
+    {
+      "event": "purchase",
+      "when": "Accepted order once; COD payment pending"
+    },
+    {
+      "event": "refund",
+      "when": "Merchandise reversal with original transaction_id and unique refund_id"
+    },
+    {
+      "event": "contact_submit",
+      "when": "Simulated contact confirmation, topic only (custom)"
+    }
+  ],
+  "contract": {
+    "clear_before_ecommerce": {
+      "ecommerce": null
+    },
+    "item_id": "stable NM- code",
+    "item_variant": "Colour / Size",
+    "price": "numeric discounted unit price",
+    "discount": "per-unit coupon discount",
+    "value": "discounted merchandise only, excluding shipping",
+    "tax": "0 additional tax; prices inclusive",
+    "purchase_guard": "persisted checkout identity and purchase claim, never emitted by confirmation",
+    "cod": "purchase on order acceptance, payment_status pending_collection",
+    "refund": "merchandise only, limited to remaining quantity",
+    "pii": "customer details excluded"
+  },
+  "selectors": {
+    "product_card": "[data-product-id=\"NM-B001\"]",
+    "product_link": "#product-link-NM-B001",
+    "size": "[data-action=\"size\"]",
+    "colour": "[data-action=\"colour\"]",
+    "quantity": "#product-quantity",
+    "add_to_cart": "#add-to-cart",
+    "cart": "#cart-toggle",
+    "checkout": "#checkout-button",
+    "payment": "#payment-visa / #payment-mastercard / #payment-valu / #payment-cod",
+    "place_order": "#place-order",
+    "contact": "#contact-link"
+  },
+  "configuration": "Set training-config.json with gtmId and measurementId, rebuild, then configure and verify GTM/GA4 separately. No API secrets.",
+  "references": [
+    "https://developers.google.com/analytics/devguides/collection/ga4/ecommerce",
+    "https://developers.google.com/tag-platform/tag-manager/datalayer"
+  ]
+}
